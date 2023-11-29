@@ -11,7 +11,8 @@ function btnClicked() {
   let ans2 = document.getElementById("input2").value.toLowerCase();
   let ans3 = document.getElementById("input3").value.toLowerCase();
   let ans4 = document.getElementById("input4").value.toLowerCase();
-  // Check answers
+  
+  // Give feedback on answers
 
   if (ans1 === "vigil") {
     document.getElementById("q1a").innerHTML = "Correct!";
@@ -36,8 +37,10 @@ function btnClicked() {
 
 let sc = 0;
 
+// Check answers
+
   if(ans1 === "vigil") {
-sc++
+    sc++
   }
   if (ans2 === "mozzie") {
     sc++
@@ -48,6 +51,8 @@ sc++
   if (ans4 === "warden" || ans4 === "glaz") {
     sc++
   }
+
+// Display your grade
 
   if (sc === 0) {
     document.getElementById("score").innerHTML = "0/4 (0%)"
@@ -60,6 +65,8 @@ sc++
   } else if (sc === 4) {
     document.getElementById("score").innerHTML = "4/4 (100%)";
   }
+
+// Give feedback for grade
 
   if (sc === 3) {
     document.getElementById("msg").innerHTML = "Good Job!";
